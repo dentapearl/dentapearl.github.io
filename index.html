@@ -64,11 +64,26 @@
             </p>
           </div>
           <div class="header__img col-md-5">
-            <img
-              src="img/rootcanal.jpg"
-              alt="work"
-              class="header__image-work"
-            />
+            <div class="carousel slide" data-ride="carousel">
+
+           <div class="carousel-inner">
+              <img
+                src="img/rootcanal.jpg"
+                alt="work"
+                class="carousel-item active header__image-work"
+              /> 
+               <img
+                src="img/34.jpg"
+                alt="work"
+                class="carousel-item header__image-work"
+              /> 
+               <img
+                src="img/1.jpg"
+                alt="work"
+                class="carousel-item header__image-work"
+              /> 
+          </div>
+          </div>
           </div>
         </div>
       </div>
@@ -335,12 +350,12 @@
             <div class="sign-up__form col-md-4 text-center">
                 <p class="lead ">Данные для записи</p>
 
-                <form class="sign-up__form-details text-left">
-                <label for="name">Имя </label>
-                <input type="text" name="name" id="name" class="form-control mb-2 " placeholder="Введите имя" required>
-                <label for="phone">Телефон</label>
-                <input type="text" name="phone" id="phone" class="form-control mb-2" placeholder="Введите номер телефон" required>
-                <button class="btn btn-block btn-success" type="submit">Отправить заявку</button>
+                <form method="POST" action="http://localhost:3001/index" class="sign-up__form-details text-left">
+                  <label for="name">Имя </label>
+                  <input type="text" name="name" id="name" class="form-control mb-2 " placeholder="Введите имя" required>
+                  <label for="phone">Телефон</label>
+                  <input type="text" name="phone" id="phone" class="form-control mb-2" placeholder="Введите номер телефон" required>
+                  <button class="btn btn-block btn-success" type="submit">Отправить заявку</button>
                 </form>
             </div>
             </div>
@@ -390,6 +405,8 @@
         <h1 class="lead"> &copy; Created by Sharper-JS</h1>
     </footer>
 
+  
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -400,5 +417,12 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+    
+      <script>
+      $('.carousel').carousel({
+        interval: 5000,
+        pause: 'hover'
+      })
+    </script>
   </body>
 </html>
